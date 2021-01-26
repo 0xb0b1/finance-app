@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -14,20 +14,23 @@
 </head>
 
 <body>
-    <header>
-        <img src="./assets/logo.svg" alt="Logo Dev Finance">
-    </header>
+
+    <section>
+        <header>
+            <img src="./assets/logo.svg" alt="Logo">
+        </header>
+    </section>
 
     <main class="container">
-        <section id="balance">
-            <h2 class="sr-only">Balanço</h2>
+        <div class="expenses-container">
+            <!-- <h2 class="sr-only">Balanço</h2> -->
 
             <div class="card">
                 <h3>
                     <span>
-                        Entradas
+                        Income
                     </span>
-                    <img src="./assets/income.svg" alt="Image de entradas">
+                    <img src="./assets/income.svg" alt="income image">
                 </h3>
                 <p>R$ 5.000,00</p>
             </div>
@@ -35,9 +38,9 @@
             <div class="card">
                 <h3>
                     <span>
-                        Saídas
+                        Expenses
                     </span>
-                    <img src="./assets/expense.svg" alt="Image de saídas">
+                    <img src="./assets/expense.svg" alt="expense image">
                 </h3>
                 <p>R$ 2.000,00</p>
             </div>
@@ -52,18 +55,18 @@
                 <p>R$ 3.000,00</p>
             </div>
 
-        </section>
+        </div>
 
-        <section id="transaction">
-            <h2 class="sr-only">Transações</h2>
+        <div id="transaction" class="transactions">
+            <h2 class="sr-only">Transactions</h2>
 
-            <a href="#" onclick="Modal.open()" class="button new">+ Nova Transação</a>
+            <a href="#" onclick="Modal.open()" class="button new">+ New Transaction</a>
 
             <table id="data-table">
                 <thead>
                     <tr>
-                        <th>Descrição</th>
-                        <th>Valor</th>
+                        <th>Description</th>
+                        <th>Price</th>
                         <th>Data</th>
                         <th></th>
                     </tr>
@@ -95,7 +98,7 @@
                     </tr>
                 </tbody>
             </table>
-        </section>
+        </div>
     </main>
 
 </body>

@@ -3,6 +3,7 @@
     --dark-blue: #363f5f;
     --green: #49AA26;
     --light-green: #3dd705;
+    --dark-green: #2D4A22;
     --red: #e92929;
 
 }
@@ -13,22 +14,50 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 93.75%;
-    /* 15px */
-}
-
-body {
-    background: #f0f2f5;
-    font-family: 'Poppins', sans-serif
-}
-
-#header {
-    background-color: #2D4A22;
-    padding: 2rem 0 10rem;
+header {
+    background-color: var(--dark-green);
     text-align: center;
+    font-size: 2rem;
+    padding: 2rem 0 8rem;
 }
-#logo {
-    color: #fff;
-    font-weight: 100;
+
+/* classes */
+.container {
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    min-height: 100px;
+    margin-top: -120px;
+    overflow: hidden;
+}
+
+.expenses-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.transactions {
+}
+
+.card {
+    flex-direction: column;
+    background-color: #E7E7E7;
+    margin: 20px;
+    padding: 40px;
+    width: 80vw;
+    border-radius: 12px;
+}
+
+.total {
+    background-color: #49AA26;
+}
+
+/* media queries */ 
+@media all and (min-width: 800px) {
+    .expenses-container {
+        flex-direction: row;
+        margin-left: 220px;
+        margin-right: 220px;
+    }
 }
