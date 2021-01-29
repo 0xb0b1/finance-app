@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    background: #f0f2f5;
+    background-image: radial-gradient(#cccccc, #FFFFFF);
     font-family:'Poppins', sans-serif
 }
 
@@ -53,6 +53,7 @@ body::-webkit-scrollbar-thumb:hover {
     width: min(90vw, 800px);
     margin: auto;
 }
+
 
 /* Titles */
 h2 {
@@ -159,7 +160,57 @@ header {
     color: white;
 }
 
+/* tables */
+#data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+}
 
+table th {
+    background: white;
+    font-weight: normal;
+    color: #969cb3;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+table tbody tr {
+    opacity: .7;
+}
+table tbody tr:hover {
+    opacity: 1;
+}
+
+table td {
+    background-color: white;
+    padding: 1rem 2rem;
+}
+
+td.description {
+    color: var(--dark-blue);
+}
+
+td.income {
+    color: #12a454;
+}
+
+td.expense {
+    color: #e92929;
+}
+
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: var(--dark-blue);
+    opacity: .6;
+}
 /* Responsive */
 @media (min-width: 800px) {
     html {
