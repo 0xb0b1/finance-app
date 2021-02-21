@@ -286,6 +286,20 @@ footer {
     color: var(--dark-blue);
     opacity: .4;
 }
+
+#footer {
+    color: var(--dark-blue);
+}
+/* == footer icon == */
+.fab {
+    font-size: 1.2rem;
+    margin: 0 auto;
+    color: #000;
+}
+
+
+
+
 /* Responsive */
 @media (min-width: 800px) {
     html {
