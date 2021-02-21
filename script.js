@@ -2,15 +2,15 @@ const Modal = {
     open() {
         // abrir formulário
         // Adicionar a classe `active`
-        document.querySelector('.modal-overlay').classList.add('active')
+        document.querySelector(".modal-overlay").classList.add("active");
     },
 
     close() {
         // fechar o formulário
         // Remover a classe `active`
-        document.querySelector('.modal-overlay').classList.remove('active')
-    }
-}
+        document.querySelector(".modal-overlay").classList.remove("active");
+    },
+};
 
 const transactions = [
     {
@@ -31,7 +31,7 @@ const transactions = [
         amount: -200,
         date: "22/01/2021",
     },
-]
+];
 
 const Transaction = {
     incomes() {
@@ -44,21 +44,21 @@ const Transaction = {
 
     total() {
         // entradas - saídas
-    }
-}
+    },
+};
 
 // pegar as transações e colocar no HTML
 const DOM = {
     innerHTMLTransaction() {
         const html = `
         <tr>
-            <td class="description">Luz</td>
-            <td class="expense">- R$ 500,00</td>
-            <td class="date">23/01/2021</td>
+            <td class="description"> Luz</td>
+            <td class="expense"> - R$ 500,00</td>
+            <td class="date"> 23/01/2021</td>
             <td>
                 <img src="./assets/minus.svg" alt="Remover transação">
                 </td>
             </tr>
-         `
-    }
-}
+         `;
+    },
+};
