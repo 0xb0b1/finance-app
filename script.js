@@ -35,19 +35,50 @@ const transactions = [
 
 const Transaction = {
     incomes() {
-        // soma das entradas
+        let income = 0;
+        transactions.forEach((transaction) => {
+            if (transaction.amount > 0) {
+                income += transaction.amount;
+            }
+        });
+        return income;
     },
 
     expenses() {
-        // soma das saídas
+        let expense = 0;
+
+        transactions.forEach((transaction) => {
+            if (transaction.amount < 0) {
+                expense -= transaction.amount;
+            }
+        });
+        return expense;
     },
 
     total() {
-        // entradas - saídas
+        return Transaction.incomes() - Transaction.expenses();
     },
 };
 
-// pegar as transações e colocar no HTML
+//
+const Utils = {
+    formatCurrency(value) {
+        const signal = Number(value) < 0 ? "-" : "";
+
+        value = String(value).replace(/\D/g, "");
+
+        value = Number(value) / 100;
+
+        value = value.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+        });
+
+        return signal + value;
+    },
+};
+
+// pegar as transações e colocar no HTM
 const DOM = {
     transactionsContainer: document.querySelector("#data-table tbody"),
 
@@ -70,27 +101,26 @@ const DOM = {
             <td>
                 <img src="./assets/minus.svg" alt="Remover transação">
             </td>
-        `;
+            `;
 
         return html;
     },
-};
 
-const Utils = {
-    formatCurrency(value) {
-        const signal = Number(value) < 0 ? "-" : "";
+    updateBalance(value) {
+        document.getElementById(
+            "incomeDisplay"
+        ).innerHTML = Utils.formatCurrency(Transaction.incomes());
 
-        value = String(value).replace(/\D/g, "");
+        document.getElementById(
+            "expenseDisplay"
+        ).innerHTML = Utils.formatCurrency(Transaction.expenses());
 
-        value = Number(value) / 100;
-
-        value = value.toLocaleString("pt-BR", {
-            style: "currency",
-            currency: "BRL",
-        });
-
-        return signal + value;
+        document.getElementById(
+            "totalDisplay"
+        ).innerHTML = Utils.formatCurrency(Transaction.total());
     },
 };
 
 transactions.forEach((transaction) => DOM.addTransaction(transaction));
+
+DOM.updateBalance();
