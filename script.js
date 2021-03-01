@@ -12,13 +12,17 @@ const Modal = {
     },
 };
 
-const transactions = [];
-
 const Transaction = {
-    all: transactions,
+    all: [],
 
     add(transaction) {
         Transaction.all.push(transaction);
+
+        App.reload();
+    },
+
+    remove(index) {
+        Transaction.all.splice(index, 1);
 
         App.reload();
     },
@@ -46,24 +50,6 @@ const Transaction = {
 
     total() {
         return Transaction.incomes() - Transaction.expenses();
-    },
-};
-
-//
-const Utils = {
-    formatCurrency(value) {
-        const signal = Number(value) < 0 ? "-" : "";
-
-        value = String(value).replace(/\D/g, "");
-
-        value = Number(value) / 100;
-
-        value = value.toLocaleString("pt-BR", {
-            style: "currency",
-            currency: "BRL",
-        });
-
-        return signal + value;
     },
 };
 
@@ -114,6 +100,25 @@ const DOM = {
     },
 };
 
+const Utils = {
+    formatCurrency(value) {
+        const signal = Number(value) < 0 ? "-" : "";
+
+        value = String(value).replace(/\D/g, "");
+
+        value = Number(value) / 100;
+
+        value = value.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+        });
+
+        return signal + value;
+    },
+};
+
+const Form = {};
+
 const App = {
     init() {
         Transaction.all.forEach((transaction) =>
@@ -131,7 +136,6 @@ const App = {
 App.init();
 
 Transaction.add({
-    id: 1,
     description: "App",
     amount: 200000,
     date: "23/01/2021",

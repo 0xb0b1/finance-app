@@ -79,6 +79,7 @@ button {
     height: 50px;
     border: none;
     color: white;
+    padding: 0;
     background: var(--green);
     border-radius: .25rem;;
     cursor: pointer;
@@ -289,12 +290,6 @@ footer {
 
 #footer {
     color: var(--dark-blue);
-}
-/* == footer icon == */
-.fab {
-    font-size: 1.2rem;
-    margin: 0 auto;
-    color: #000;
 }
 
 /* Responsive */
