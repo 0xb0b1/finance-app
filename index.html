@@ -90,7 +90,7 @@
         <div class="modal">
             <div id="form">
                 <h2>Nova transação</h2>
-                <form action="">
+                <form action="" onsubmit="Form.submit(event)">
                     <div class="input-group">
                         <label class="sr-only" for="description">Descrição</label>
                         <input type="text" id="description" name="description" placeholder="Descrição" />
@@ -110,7 +110,7 @@
 
                     <div class="input-group actions">
                         <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
-                        <button>Salvar</button>
+                        <button onclick="saveTransaction();Modal.close()">Salvar</button>
                     </div>
                 </form>
             </div>
@@ -119,7 +119,7 @@
 
 
     <footer>
-        <a href="https://github.com/0xb0b1/finance-app" id="footer">dev.finance$</a>
+        <p>dev.finance$</p>
     </footer>
 
     <script async src="./script.js"></script>

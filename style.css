@@ -283,9 +283,8 @@ input {
 /* footer */
 footer {
     text-align: center;
-    padding: 10rem 0 2rem;
+    padding: 4rem 0 2rem;
     color: var(--dark-blue);
-    opacity: .4;
 }
 
 #footer {
