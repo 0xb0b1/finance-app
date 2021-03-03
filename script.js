@@ -214,3 +214,5 @@ const App = {
 };
 
 App.init();
+
+// localStorage.clear();
