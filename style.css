@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    background-image: radial-gradient(#cccccc, #FFFFFF);
+    background-image: radial-gradient(#cccccc, #eeeeee);
     font-family:'Poppins', sans-serif
 }
 
@@ -113,7 +113,7 @@ button:hover {
 
 /* Header */
 header {
-    background: #2D4A22;
+    background-image: radial-gradient(#2D4A22, #4D4A22);
     padding: 2rem 0 10rem;
     text-align: center;
 }
@@ -135,11 +135,18 @@ header {
 
 /* Cards */
 .card {
-    background: white;
+    /* background: white; */
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;
     margin-bottom: 2rem;
     color: var(--dark-blue);
+
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 1);
+    backdrop-filter: blur(20.0px);
+    -webkit-backdrop-filter: blur(20.0px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .card h3 {
@@ -157,8 +164,19 @@ header {
 }
 
 .card.total {
-    background: var(--green);
+    background: rgba(37, 163, 37, .8);
+
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 1);
+    backdrop-filter: blur(20.0px);
+    -webkit-backdrop-filter: blur(20.0px);
+
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     color: white;
+}
+
+.card:hover {
+    transform: rotate3d(1, 2.0, 3.0, 5deg);
 }
 
 /* tables */
@@ -237,10 +255,16 @@ td.expense {
 }
 
 .modal {
-    background: #f0f2f5;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 1);
+    backdrop-filter: blur(20.0px);
+    -webkit-backdrop-filter: blur(20.0px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
     padding: 2.5rem;
-    /* width: 98%;
-    max-width: 520px; */
+    width: 90%;
+    max-width: 520px;
 }
 
 /* Form */
