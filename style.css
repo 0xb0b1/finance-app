@@ -19,7 +19,7 @@ html {
 
 body {
     background-image: radial-gradient(#cccccc, #eeeeee);
-    font-family:'Poppins', sans-serif;
+    font-family:'Exo 2', sans-serif;
 }
 
 /* scrollbar */
@@ -35,6 +35,11 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
     background-color: var(--light-green);
+}
+
+img {
+    width: auto;
+    height: auto;
 }
 
 .sr-only {
@@ -113,7 +118,7 @@ button:hover {
 
 /* Header */
 header {
-    background-image: radial-gradient(#2D4A22, #4D4A22);
+    background-image: radial-gradient(#4DDA22, #000000);
     padding: 2rem 0 10rem;
     text-align: center;
 }
@@ -149,16 +154,20 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+.card img {
+    font-weight: 900;
+}
+
 .card h3 {
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 1.4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .card p {
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 3rem;
     margin-top: 1rem;
 }
@@ -193,8 +202,9 @@ header {
 
 table th {
     background: white;
-    font-weight: normal;
-    color: #969cb3;
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: #000;
     padding: 1rem 2rem;
     text-align: left;
 }
@@ -222,15 +232,15 @@ table td {
 }
 
 td.description {
-    color: var(--dark-blue);
+    color: #000;
 }
 
 td.income {
-    color: #12a454;
+    color: #00a149;
 }
 
 td.expense {
-    color: #e92929;
+    color: #e90000;
 }
 
 /* modal */
