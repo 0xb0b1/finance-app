@@ -1,4 +1,4 @@
-<h1 align="center">Book Shelf</h1>
+<h1 align="center">Finance App</h1>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/paulo-vicente-6abab0198/">
