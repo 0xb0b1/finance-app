@@ -4,10 +4,10 @@
   <a href="https://www.linkedin.com/in/paulo-vicente-6abab0198/">
     <img alt="Paulo Vicente" src="https://img.shields.io/badge/-PauloVicente-c9c9c9?style=flat&logo=Linkedin&logoColor=white" />
   </a>
-  <a href="https://github.com/0xb0b1/bookList#readme">
+  <a href="https://github.com/0xb0b1/finance-app#readme">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-c9c9c9.svg" target="_blank" />
   </a>
-  <a href="https://github.com/0xb0b1/bookList/graphs/commit-activity">
+  <a href="https://github.com/0xb0b1/finance-app/graphs/commit-activity">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-c9c9c9.svg" target="_blank" />
   </a>
   <a href="https://github.com/0xb0b1/finance-app/blob/master/LICENSE">
